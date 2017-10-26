@@ -8,7 +8,12 @@
   <!-- needed for ContextLoaderListener -->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:springbean.xml</param-value>
+    <param-value>classpath:Spring/springbean.xml</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>classpath:Sql/log4j.properties</param-value>
   </context-param>
 
   <!-- Bootstraps the root web application context before servlet initialization -->
@@ -23,7 +28,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:springmvc.xml</param-value>
+      <param-value>classpath:Spring/springmvc.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
