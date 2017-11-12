@@ -17,4 +17,19 @@ public class UserService implements IUserService {
 	public List<User> loadAll(){
 		return userDao.loadAll();
 	}
+	public boolean saveUser(User user){
+		boolean bool=false;
+		if(userDao.insert(user)==1)bool=true;
+		return bool;
+	}
+    public User loadUserByopenId(String openId){
+
+        return userDao.loadUserByopenId(openId);
+    }
+
+	public boolean loadById(String openId) {
+		User user=userDao.loadById(openId);
+		System.out.println(user);
+		return user!=null?true:false;
+	}
 }

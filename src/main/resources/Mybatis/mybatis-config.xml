@@ -4,11 +4,7 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
-<!-- mybatis 配置文件 -->
-<configuration>
-	<typeAliases>
-		<typeAlias type="com.card.mybatis.entity.Book" alias="book"/>
-	</typeAliases>
+
 	<!-- 环境配置(ORM 数据环境) -->
 	<environments default="development">
 		<environment id="development">
@@ -18,13 +14,14 @@
 			     JNDI(Java命名目录服务) 从服务器获取一个数据连接(tomcat) -->
 			<dataSource type="UNPOOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver"/>
-				<property name="url" value="jdbc:mysql://localhost:3306/test?serverTimezone=UTC"/>
-				<property name="username" value="root"/>
-				<property name="password" value="1324"/>
+				<property name="url" value="jdbc:mysql://39.106.35.115:3306/vip?serverTimezone=UTC"/>
+				<property name="username" value="development"/>
+				<property name="password" value="vipCardProject"/>
 			</dataSource>
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="com/hellojava/mybatis/entity/BookMapper.xml"/>
+		<mapper resource="Mapper/UserMapper.xml"/>
+		<mapper resource="Mapper/vipCardMapper.xml"/>
 	</mappers>
 </configuration>

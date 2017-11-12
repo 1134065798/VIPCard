@@ -12,6 +12,20 @@ public class User implements Serializable{
 	private String userMajor;
 	private String userPhoto;
 
+	public User() {
+	}
+
+	public User(String openId, String phone, String userName, String userSex,
+				String userSchool, String userMajor, String userPhoto) {
+		this.openId = openId;
+		this.phone = phone;
+		this.userName = userName;
+		this.userSex = userSex;
+		this.userSchool = userSchool;
+		this.userMajor = userMajor;
+		this.userPhoto = userPhoto;
+	}
+
 	public String getOpenId() {
 		return openId;
 	}

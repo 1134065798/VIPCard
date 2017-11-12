@@ -11,10 +11,16 @@
 		<property name="prefix" value="/WEB-INF/views/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	
+
+	<context:component-scan base-package="com.card.controller"/>
+
 	<mvc:annotation-driven/>
 
 	<context:component-scan base-package="com.card">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 	</context:component-scan>
+
+
+	<!--过滤器-->
+
 </beans>

@@ -3,7 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.card.dao.IUserDao">
-    <select id="loadAll" resultType="user">
+    <select id="loadAll" resultType="com.card.entity.User">
         select * from users
+    </select>
+
+    <select id="loadUserByopenId"  parameterType="string" resultType="com.card.entity.User">
+       SELECT openId,userName,userSchool,phone,userPhoto FROM users WHERE openId= #{openId}
+    </select>
+    <insert id="insert" parameterType="com.card.entity.User">
+        insert into users VALUES (#{openId},#{phone},#{userName},#{userSex},
+        #{userSchool},#{userMajor},#{userPhoto})
+    </insert>
+
+    <select id="loadById" parameterType="java.lang.String" resultType="com.card.entity.User">
+        SELECT * FROM users WHERE openId=#{openId}
     </select>
 </mapper>

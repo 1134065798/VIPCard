@@ -1,32 +1,32 @@
-package com.vipCardProject.spring.web.controller;
+package com.card.controller;
 
-import com.vipCardProject.spring.web.entity.Code;
+import com.card.util.SendMessageUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import redis.clients.jedis.Jedis;
 
 
 /**
- * Created by 69027 on 2017/10/18.
+ * Created by 69027 on 2017/11/2.
  */
 @Controller
 public class CodeController {
+    @ResponseBody
     @RequestMapping("/getCode")
-    public String getCode(HttpServletRequest request){
-        long c=System.currentTimeMillis();
-        String s=String.valueOf(c);
+    public String getCode(@RequestParam("phone")String phone) {
+        String s=String.valueOf(System.currentTimeMillis());
         String code=s.substring(s.length()-4,s.length());
 
-        Jedis jedis = new Jedis("39.106.35.242",6379);
-        jedis.set("code",code);
-        jedis.expire("code",60);
-        jedis.close();
+        Jedis jedis = new Jedis("47.95.222.74",6379);
+        jedis.set(phone,code);
+        jedis.expire(phone,60);
+        //jedis.close();
 
-        SendMessage.sendMessage(request.getParameter("phoneNumber"),code);
+        SendMessageUtil.sendMesaage(phone,code);
 
-        return "Redister.jsp";
-
-
+        return "register"+phone+"--"+jedis.get(phone);
 
     }
 }
