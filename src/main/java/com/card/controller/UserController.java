@@ -55,39 +55,42 @@ public class UserController {
 		//http://localhost:8080/VIPCard/register?openId=1&phone=10&userName=%E5%BC%A0%E4%B8%89&userSex=%E7%94%B7&userSchool=%E8%A5%BF%E7%A7%91%E5%A4%A7&userMajor=%E5%B7%A5%E4%B8%9A&userPhoto=test&activeCode=3
 		String errmsg=null;
 		String error="0";
-		Card card=cardService.findCard(activeCode);
+
 		QRCodeUtil qrCodeUtil=new QRCodeUtil();
-		Jedis jedis=new Jedis("47.95.222.74",6379);
-		String code=jedis.get(phone);
-		System.out.println(code);
-		jedis.close();
 
-		if(code.equals(verifCode)==false){
-			errmsg="验证码错误";
+//		Jedis jedis=new Jedis("47.95.222.74",6379);
+//		String code=jedis.get(phone);
+//		jedis.close();
+		String code="3";
+
+		Card card=cardService.findCard(activeCode);
+
+		if(code==null){
+			errmsg="验证码失效";
+		}else if (code.equals(verifCode) == false) {
+			errmsg = "验证码错误";
+		}else if (card == null) {
+			errmsg = "激活码错误";
 		}else {
-			if (card == null) {
-				errmsg="激活码错误";
-			}else {
-					User user = new User(openId, phone, userName, userSex, userSchool, userMajor, userPhoto);
-					VipCard vipCard = new VipCard();
-					vipCard.setCardId(card.getCardId());
-					vipCard.setOpenId(user.getOpenId());
-					vipCard.setCreateTime(TimeUtil.getCreateTime());
-					//vipCard.setQrCode(qrCodeUtil.generateQRCode(user.getOpenId()));
-					vipCard.setQrCode("1");
+			User user = new User(openId, phone, userName, userSex, userSchool, userMajor, userPhoto);
+			VipCard vipCard = new VipCard();
+			vipCard.setCardId(card.getCardId());
+			vipCard.setOpenId(user.getOpenId());
+			vipCard.setCreateTime(TimeUtil.getCreateTime());
+			//vipCard.setQrCode(qrCodeUtil.generateQRCode(user.getOpenId()));
+			vipCard.setQrCode("1");
 
-					vipCardService.saveVipCard(vipCard);
-					cardService.delectCard(card.getCardId());
-					userService.saveUser(user);
+			vipCardService.saveVipCard(vipCard);
+			cardService.delectCard(card.getCardId());
+			userService.saveUser(user);
 
-					error="1";
-				}
-			}
+			error = "1";
+		}
 		Map<String,String> map=new HashMap<String, String>();
 		map.put("error",error);
 		map.put("errmsg",errmsg);
-		String json= JSON.toJSONString(map);
-		return json;
+
+		return JSON.toJSONString(map);
 	}
 
 }
