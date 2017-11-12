@@ -7,9 +7,14 @@ import org.junit.Test;
  */
 public class QRCodeUtilTest {
     @Test
+    public void generateQRCode1() throws Exception {
+    }
+
+    @Test
     public void generateQRCode() throws Exception {
+        QRCodeUtil qrCodeUtil=new QRCodeUtil();
         String openId="123456789";
-        System.out.println(QRCodeUtil.generateQRCode(openId));
+        System.out.println(qrCodeUtil.generateQRCode(openId));
     }
 
 }

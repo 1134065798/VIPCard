@@ -32,6 +32,7 @@ public class QRCodeUtil {
     private static String path= PropertyUtil.getValue_String("path");
     private static String AK= PropertyUtil.getValue_String("AK");
     private static String SK= PropertyUtil.getValue_String("SK");
+    private static String QRCodeURL= PropertyUtil.getValue_String("QRCodeURL");
 
 
     public QRCodeUtil(){}
@@ -56,17 +57,17 @@ public class QRCodeUtil {
         }
     }
 
-    public static String generateQRCode(String openId) throws IOException, WriterException {
+    public String generateQRCode(String openId) throws IOException, WriterException {
 
         Hashtable<EncodeHintType,Object> hints=new Hashtable<EncodeHintType, Object>();
         hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
 
-        BitMatrix bitMatrix = new MultiFormatWriter().encode(openId, BarcodeFormat.QR_CODE, width, height, hints);
+        BitMatrix bitMatrix = new MultiFormatWriter().encode(QRCodeURL+openId, BarcodeFormat.QR_CODE, width, height, hints);
 
         String pathName = path+openId+".png";
         File outputFile = new File(pathName);
 
-        QRCodeUtil.writeToFile(bitMatrix, format, outputFile);
+        writeToFile(bitMatrix, format, outputFile);
         String url=QRCodeUPLoad(pathName);
 
         outputFile.delete();
