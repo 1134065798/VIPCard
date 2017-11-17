@@ -15,18 +15,19 @@ import redis.clients.jedis.Jedis;
 public class CodeController {
     @ResponseBody
     @RequestMapping("/getCode")
-    public String getCode(@RequestParam("phone")String phone) {
+    public void getCode(@RequestParam("phone")String phone) {
         String s=String.valueOf(System.currentTimeMillis());
         String code=s.substring(s.length()-4,s.length());
 
         Jedis jedis = new Jedis("47.95.222.74",6379);
-        jedis.set("phone",code);
-        jedis.expire("phone",60);
+        jedis.set(phone,code);
+        jedis.expire(phone,60);
+
         //jedis.close();
 
         SendMessageUtil.sendMesaage(phone,code);
 
-        return "register"+phone+"--"+jedis.get(phone);
+       //return "register"+phone+"--"+jedis.get("phone");
 
     }
 }

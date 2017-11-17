@@ -48,7 +48,8 @@ public class UserController {
 						   @RequestParam("userSchool")String userSchool,
 						   @RequestParam("userSex")String userSex,
 						   @RequestParam("activeCode")String activeCode,
-						   @RequestParam("verifCode")String verifCode
+						   @RequestParam("verifCode")String verifCode,
+						   @RequestParam("jsonCallBack")String jsonCallBack
 						   ) throws IOException, WriterException {
 
 		String errmsg=null;
@@ -86,7 +87,7 @@ public class UserController {
 		map.put("error",error);
 		map.put("errmsg",errmsg);
 
-		return JSON.toJSONString(map);
+		return jsonCallBack+"("+JSON.toJSONString(map)+")";
 	}
 
 }

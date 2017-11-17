@@ -62,7 +62,8 @@ public class WeixinController {
 
         String openId = GetOpenIdUtil.getOpenid(code);
         boolean bool=userService.loadById(openId);
-        return bool?"redirect:regist?openId=openId":"info?openId=openId";
+        return bool?"redirect:/views/MemberInformation.html"+"?openId="+openId
+                :"redirect:/views/MembershipCard-active.html"+"?openId="+openId;
     }
 
 }

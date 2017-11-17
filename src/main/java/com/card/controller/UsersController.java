@@ -10,6 +10,7 @@ import com.card.service.IVipCardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -34,7 +35,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //        private AddTwo addTwo;
         @ResponseBody
         @RequestMapping(value="/usersController",produces = "text/html;charset=UTF-8")
-        public String loadAll(String openId) {
+        public String loadAll(@RequestParam("jsonCallBack")String jsonCallBack,
+                              @RequestParam("openId")String openId) {
            //String openId = "00000100000200000300000400000501";
 
             User user = userService.loadUserByopenId(openId);
@@ -42,19 +44,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
             AddTwo addTwo = new AddTwo();
             addTwo.setUser(user);
             addTwo.setVipCard(qrCode);
-            String json =""+JSON.toJSON(addTwo);
+            String json =jsonCallBack+"("+JSON.toJSON(addTwo)+")";
             return json;
         }
 
         @ResponseBody
         @RequestMapping(value="/qrCodeController",produces = "text/html;charset=UTF-8")
-        public String qrCode(String openId){
+        public String qrCode(@RequestParam("jsonCallBack")String jsonCallBack,
+                             @RequestParam("openId")String openId){
             String cardId=vipCardService.findCardIdByOpenId(openId);
             User user = userService.loadUserByopenId(openId);
             qrCode qrcode = new qrCode();
             qrcode.setUser(user);
             qrcode.setCardId(cardId);
-            String qrCodeJson =""+JSON.toJSON(qrcode);
+            String qrCodeJson =jsonCallBack+"("+JSON.toJSON(qrcode)+")";
             return qrCodeJson;
         }
 
