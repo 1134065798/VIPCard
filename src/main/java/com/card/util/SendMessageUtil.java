@@ -1,6 +1,7 @@
 package com.card.util;
 import com.github.qcloudsms.SmsSingleSender;
 import com.github.qcloudsms.SmsSingleSenderResult;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 
@@ -8,6 +9,7 @@ import java.util.ArrayList;
  * Created by 69027 on 2017/11/2.
  */
 public class SendMessageUtil {
+    private static final Logger log= Logger.getLogger(SendMessageUtil.class);
     public static void sendMesaage(String phone,String code) {
                 try {
                     //请根据实际 appid 和 appkey 进行开发
@@ -27,6 +29,7 @@ public class SendMessageUtil {
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    log.error("验证码发送异常"+e);
                 }
 
     }

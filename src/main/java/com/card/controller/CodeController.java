@@ -1,6 +1,7 @@
 package com.card.controller;
 
 import com.card.util.SendMessageUtil;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,9 +14,13 @@ import redis.clients.jedis.Jedis;
  */
 @Controller
 public class CodeController {
+    private static final Logger log= Logger.getLogger(CodeController.class);
+
     @ResponseBody
     @RequestMapping("/getCode")
     public void getCode(@RequestParam("phone")String phone) {
+        log.info("发送验证码");
+
         String s=String.valueOf(System.currentTimeMillis());
         String code=s.substring(s.length()-4,s.length());
 

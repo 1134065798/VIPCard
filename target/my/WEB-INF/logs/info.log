@@ -1,0 +1,51 @@
+22:20:21,827  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+22:20:22,697  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Mon Nov 20 22:20:22 CST 2017]; root of context hierarchy
+22:20:23,769  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+22:20:32,866  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 11017 ms
+22:20:33,182  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+22:20:33,247  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
+22:20:33,253  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+22:20:37,829  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+22:20:39,777  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+22:20:39,794  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+22:20:39,795  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+22:20:39,804  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+22:20:39,806  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+22:20:39,815  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+22:20:39,818  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+22:20:39,824  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+22:20:44,428  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
+22:20:45,779  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
+22:20:47,650  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 14467 ms
+22:20:48,832  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
+22:20:51,198  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
+22:21:00,504  INFO UserController:57 - 进入注册控制器
+22:21:01,859  INFO DruidDataSource:715 - {dataSource-1} inited
+22:21:04,192 ERROR UserController:72 - 验证码失效
+22:34:37,722  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
+22:34:37,733  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Mon Nov 20 22:20:22 CST 2017]; root of context hierarchy
+22:34:37,823  INFO DruidDataSource:1444 - {dataSource-1} closed
+22:36:44,997  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+22:36:45,622  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Mon Nov 20 22:36:45 CST 2017]; root of context hierarchy
+22:36:46,594  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+22:36:54,671  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 9659 ms
+22:36:54,985  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+22:36:55,010  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:36:55 CST 2017]; parent: Root WebApplicationContext
+22:36:55,015  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+22:36:59,085  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+22:37:00,821  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+22:37:00,833  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+22:37:00,840  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+22:37:00,849  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+22:37:00,851  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+22:37:00,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+22:37:00,867  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+22:37:00,870  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+22:37:04,811  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:36:55 CST 2017]; parent: Root WebApplicationContext
+22:37:05,911  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:36:55 CST 2017]; parent: Root WebApplicationContext
+22:37:07,339  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 12353 ms
+22:37:08,196  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
+22:37:11,105  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
+22:37:35,195  INFO UserController:57 - 进入注册控制器
+22:37:36,322  INFO DruidDataSource:715 - {dataSource-1} inited
+22:37:38,428 ERROR UserController:72 - 验证码失效

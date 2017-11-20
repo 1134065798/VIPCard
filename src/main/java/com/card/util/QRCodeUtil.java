@@ -12,6 +12,7 @@ import com.qiniu.http.Response;
 import com.qiniu.storage.Configuration;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
+import org.apache.log4j.Logger;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -21,6 +22,7 @@ import java.util.Hashtable;
 import java.util.Map;
 
 public class QRCodeUtil {
+    private static final Logger log=Logger.getLogger(QRCodeUtil.class);
 
     private static int width= PropertyUtil.getValue_Int("width");
     private static int height= PropertyUtil.getValue_Int("height");
@@ -94,6 +96,7 @@ public class QRCodeUtil {
         } catch (QiniuException e) {
             Response r = e.response;
             System.out.println(r.toString());
+            log.error("七牛云异常"+e);
             try {
                 System.out.println(r.bodyString());
             } catch (QiniuException e1) {

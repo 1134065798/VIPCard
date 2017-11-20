@@ -10,6 +10,7 @@ import com.card.service.IVipCardService;
 import com.card.util.QRCodeUtil;
 import com.card.util.TimeUtil;
 import com.google.zxing.WriterException;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,8 @@ import java.util.Map;
 
 @Controller
 public class UserController {
+	private static final Logger log=Logger.getLogger(UserController.class);
+
 	@Autowired
 	private IUserService userService;
 	@Autowired
@@ -51,6 +54,7 @@ public class UserController {
 						   @RequestParam("verifCode")String verifCode,
 						   @RequestParam("jsonCallBack")String jsonCallBack
 						   ) throws IOException, WriterException {
+		log.info("进入注册控制器");
 
 		String errmsg=null;
 		String error="0";
@@ -65,10 +69,13 @@ public class UserController {
 
 		if(code==null){
 			errmsg="验证码失效";
+			log.error("验证码失效");
 		}else if (code.equals(verifCode) == false) {
 			errmsg = "验证码错误";
+			log.error("验证码错误");
 		}else if (card == null) {
 			errmsg = "激活码错误";
+			log.error("激活码错误");
 		}else {
 			User user = new User(openId, phone, userName, userSex, userSchool, userMajor, userPhoto);
 			VipCard vipCard = new VipCard();
@@ -76,6 +83,8 @@ public class UserController {
 			vipCard.setOpenId(user.getOpenId());
 			vipCard.setCreateTime(TimeUtil.getCreateTime());
 			vipCard.setQrCode(qrCodeUtil.generateQRCode(user.getOpenId()));
+
+			log.info("保存用户信息");
 
 			vipCardService.saveVipCard(vipCard);
 			cardService.delectCard(card.getCardId());
