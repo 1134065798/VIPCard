@@ -1,51 +1,392 @@
-22:20:21,827  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
-22:20:22,697  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Mon Nov 20 22:20:22 CST 2017]; root of context hierarchy
-22:20:23,769  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
-22:20:32,866  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 11017 ms
-22:20:33,182  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
-22:20:33,247  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
-22:20:33,253  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
-22:20:37,829  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-22:20:39,777  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
-22:20:39,794  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
-22:20:39,795  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
-22:20:39,804  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
-22:20:39,806  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
-22:20:39,815  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-22:20:39,818  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
-22:20:39,824  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-22:20:44,428  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
-22:20:45,779  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
-22:20:47,650  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 14467 ms
-22:20:48,832  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
-22:20:51,198  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
-22:21:00,504  INFO UserController:57 - 进入注册控制器
-22:21:01,859  INFO DruidDataSource:715 - {dataSource-1} inited
-22:21:04,192 ERROR UserController:72 - 验证码失效
-22:34:37,722  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:20:33 CST 2017]; parent: Root WebApplicationContext
-22:34:37,733  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Mon Nov 20 22:20:22 CST 2017]; root of context hierarchy
-22:34:37,823  INFO DruidDataSource:1444 - {dataSource-1} closed
-22:36:44,997  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
-22:36:45,622  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Mon Nov 20 22:36:45 CST 2017]; root of context hierarchy
-22:36:46,594  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
-22:36:54,671  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 9659 ms
-22:36:54,985  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
-22:36:55,010  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:36:55 CST 2017]; parent: Root WebApplicationContext
-22:36:55,015  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
-22:36:59,085  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
-22:37:00,821  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
-22:37:00,833  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
-22:37:00,840  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
-22:37:00,849  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
-22:37:00,851  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
-22:37:00,865  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
-22:37:00,867  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
-22:37:00,870  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
-22:37:04,811  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:36:55 CST 2017]; parent: Root WebApplicationContext
-22:37:05,911  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Mon Nov 20 22:36:55 CST 2017]; parent: Root WebApplicationContext
-22:37:07,339  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 12353 ms
-22:37:08,196  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
-22:37:11,105  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/VIPCard/] in DispatcherServlet with name 'springDispatcherServlet'
-22:37:35,195  INFO UserController:57 - 进入注册控制器
-22:37:36,322  INFO DruidDataSource:715 - {dataSource-1} inited
-22:37:38,428 ERROR UserController:72 - 验证码失效
+14:28:33,929  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:28:34,050  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:28:34 CST 2017]; root of context hierarchy
+14:28:34,133  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:28:36,229  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2295 ms
+14:28:36,279  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:28:36,285  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:28:36 CST 2017]; parent: Root WebApplicationContext
+14:28:36,287  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:28:36,838  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:28:36,997  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:28:37,000  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:28:37,001  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:28:37,003  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:28:37,004  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:28:37,006  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:28:37,006  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:28:37,007  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:28:37,249  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:28:36 CST 2017]; parent: Root WebApplicationContext
+14:28:37,368  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:28:36 CST 2017]; parent: Root WebApplicationContext
+14:28:37,546  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1267 ms
+14:28:38,105  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:28:38,141  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:28:40,116  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:30:57,156  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:28:36 CST 2017]; parent: Root WebApplicationContext
+14:30:57,186  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:28:34 CST 2017]; root of context hierarchy
+14:31:21,108  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:31:21,261  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:31:21 CST 2017]; root of context hierarchy
+14:31:21,382  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:31:24,235  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 3121 ms
+14:31:24,397  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:31:24,408  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:31:24 CST 2017]; parent: Root WebApplicationContext
+14:31:24,411  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:31:25,283  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:31:25,476  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:31:25,482  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:31:25,482  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:31:25,485  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:31:25,486  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:31:25,488  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:31:25,489  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:31:25,489  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:31:25,787  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:31:24 CST 2017]; parent: Root WebApplicationContext
+14:31:25,889  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:31:24 CST 2017]; parent: Root WebApplicationContext
+14:31:26,208  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1810 ms
+14:31:26,574  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:31:26,598  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:31:28,228  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:37:04,874  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:31:24 CST 2017]; parent: Root WebApplicationContext
+14:37:04,898  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:31:21 CST 2017]; root of context hierarchy
+14:37:21,867  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:37:22,018  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:37:22 CST 2017]; root of context hierarchy
+14:37:22,156  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:37:24,687  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2815 ms
+14:37:24,766  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:37:24,777  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:37:24 CST 2017]; parent: Root WebApplicationContext
+14:37:24,778  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:37:25,659  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:37:25,898  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:37:25,908  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:37:25,909  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:37:25,911  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:37:25,913  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:37:25,917  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:37:25,918  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:37:25,918  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:37:26,180  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:37:24 CST 2017]; parent: Root WebApplicationContext
+14:37:26,300  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:37:24 CST 2017]; parent: Root WebApplicationContext
+14:37:26,619  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1852 ms
+14:37:27,187  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:37:27,207  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:37:28,475  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:38:58,857  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:37:24 CST 2017]; parent: Root WebApplicationContext
+14:38:58,861  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:37:22 CST 2017]; root of context hierarchy
+14:39:13,457  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:39:13,628  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:39:13 CST 2017]; root of context hierarchy
+14:39:13,755  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:39:16,269  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2802 ms
+14:39:16,343  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:39:16,353  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:39:16 CST 2017]; parent: Root WebApplicationContext
+14:39:16,355  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:39:17,232  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:39:17,396  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:39:17,399  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:39:17,399  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:39:17,402  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:39:17,402  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:39:17,404  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:39:17,405  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:39:17,405  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:39:17,634  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:39:16 CST 2017]; parent: Root WebApplicationContext
+14:39:17,750  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:39:16 CST 2017]; parent: Root WebApplicationContext
+14:39:17,988  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1644 ms
+14:39:18,374  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:39:18,392  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:39:19,516  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:39:54,654  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:39:16 CST 2017]; parent: Root WebApplicationContext
+14:39:54,658  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:39:13 CST 2017]; root of context hierarchy
+14:40:10,484  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:40:10,657  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:40:10 CST 2017]; root of context hierarchy
+14:40:10,811  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:40:13,375  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2885 ms
+14:40:13,463  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:40:13,474  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:40:13 CST 2017]; parent: Root WebApplicationContext
+14:40:13,475  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:40:14,542  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:40:14,792  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:40:14,796  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:40:14,797  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:40:14,799  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:40:14,800  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:40:14,802  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:40:14,805  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:40:14,807  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:40:15,036  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:40:13 CST 2017]; parent: Root WebApplicationContext
+14:40:15,144  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:40:13 CST 2017]; parent: Root WebApplicationContext
+14:40:15,440  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1976 ms
+14:40:15,741  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:40:15,780  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:40:17,432  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:44:27,374  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:40:13 CST 2017]; parent: Root WebApplicationContext
+14:44:27,379  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:40:10 CST 2017]; root of context hierarchy
+14:44:44,282  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:44:44,436  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:44:44 CST 2017]; root of context hierarchy
+14:44:44,561  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:44:47,137  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2846 ms
+14:44:47,218  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:44:47,228  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:44:47 CST 2017]; parent: Root WebApplicationContext
+14:44:47,230  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:44:48,074  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:44:48,262  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:44:48,267  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:44:48,267  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:44:48,269  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:44:48,270  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:44:48,271  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:44:48,272  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:44:48,272  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:44:48,538  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:44:47 CST 2017]; parent: Root WebApplicationContext
+14:44:48,683  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:44:47 CST 2017]; parent: Root WebApplicationContext
+14:44:49,025  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1806 ms
+14:44:49,196  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:44:49,309  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:44:50,556  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:50:42,373  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:44:47 CST 2017]; parent: Root WebApplicationContext
+14:50:42,406  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:44:44 CST 2017]; root of context hierarchy
+14:51:02,006  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:51:02,143  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:51:02 CST 2017]; root of context hierarchy
+14:51:02,256  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:51:04,979  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2967 ms
+14:51:05,098  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:51:05,111  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:51:05 CST 2017]; parent: Root WebApplicationContext
+14:51:05,113  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:51:06,353  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:51:06,739  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:51:06,743  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:51:06,744  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:51:06,745  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:51:06,747  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:51:06,749  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:51:06,750  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:51:06,750  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:51:07,041  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:51:05 CST 2017]; parent: Root WebApplicationContext
+14:51:07,222  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:51:05 CST 2017]; parent: Root WebApplicationContext
+14:51:07,609  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 2510 ms
+14:51:08,224  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:51:08,243  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:51:09,707  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:54:51,081  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:51:05 CST 2017]; parent: Root WebApplicationContext
+14:54:51,089  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:51:02 CST 2017]; root of context hierarchy
+14:55:21,825  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+14:55:21,986  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 14:55:21 CST 2017]; root of context hierarchy
+14:55:22,158  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+14:55:25,214  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 3383 ms
+14:55:25,325  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+14:55:25,338  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:55:25 CST 2017]; parent: Root WebApplicationContext
+14:55:25,341  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+14:55:26,452  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+14:55:26,837  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+14:55:26,841  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+14:55:26,842  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+14:55:26,844  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+14:55:26,845  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+14:55:26,850  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+14:55:26,851  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+14:55:26,851  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+14:55:27,179  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:55:25 CST 2017]; parent: Root WebApplicationContext
+14:55:27,380  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:55:25 CST 2017]; parent: Root WebApplicationContext
+14:55:27,916  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 2590 ms
+14:55:28,515  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:55:28,544  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+14:55:29,861  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:02:25,990  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 14:55:25 CST 2017]; parent: Root WebApplicationContext
+15:02:26,006  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 14:55:21 CST 2017]; root of context hierarchy
+15:02:40,670  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+15:02:40,800  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 15:02:40 CST 2017]; root of context hierarchy
+15:02:40,916  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+15:02:43,452  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2777 ms
+15:02:43,550  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+15:02:43,568  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:02:43 CST 2017]; parent: Root WebApplicationContext
+15:02:43,573  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+15:02:44,660  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+15:02:44,946  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+15:02:44,951  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+15:02:44,953  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+15:02:44,956  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+15:02:44,956  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+15:02:44,959  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+15:02:44,960  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+15:02:44,961  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+15:02:45,481  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:02:43 CST 2017]; parent: Root WebApplicationContext
+15:02:45,639  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:02:43 CST 2017]; parent: Root WebApplicationContext
+15:02:45,945  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 2394 ms
+15:02:46,603  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:02:46,637  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:02:47,881  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:04:14,743  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:02:43 CST 2017]; parent: Root WebApplicationContext
+15:04:14,746  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 15:02:40 CST 2017]; root of context hierarchy
+15:04:29,865  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+15:04:30,012  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 15:04:30 CST 2017]; root of context hierarchy
+15:04:30,204  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+15:04:32,563  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2691 ms
+15:04:32,675  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+15:04:32,708  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:04:32 CST 2017]; parent: Root WebApplicationContext
+15:04:32,716  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+15:04:33,806  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+15:04:34,007  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+15:04:34,012  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+15:04:34,012  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+15:04:34,015  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+15:04:34,016  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+15:04:34,019  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+15:04:34,020  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+15:04:34,021  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+15:04:34,260  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:04:32 CST 2017]; parent: Root WebApplicationContext
+15:04:34,363  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:04:32 CST 2017]; parent: Root WebApplicationContext
+15:04:34,591  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1915 ms
+15:04:35,178  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:04:35,197  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:04:36,284  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:07:25,555  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:04:32 CST 2017]; parent: Root WebApplicationContext
+15:07:25,558  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 15:04:30 CST 2017]; root of context hierarchy
+15:07:40,594  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+15:07:40,765  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 15:07:40 CST 2017]; root of context hierarchy
+15:07:40,907  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+15:07:43,317  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2718 ms
+15:07:43,411  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+15:07:43,426  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:07:43 CST 2017]; parent: Root WebApplicationContext
+15:07:43,428  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+15:07:44,577  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+15:07:45,018  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+15:07:45,023  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+15:07:45,024  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+15:07:45,027  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+15:07:45,028  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+15:07:45,076  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+15:07:45,078  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+15:07:45,078  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+15:07:45,487  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:07:43 CST 2017]; parent: Root WebApplicationContext
+15:07:45,692  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:07:43 CST 2017]; parent: Root WebApplicationContext
+15:07:46,106  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 2694 ms
+15:07:46,489  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:07:46,506  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:07:49,328  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:12:33,063  INFO UserController:62 - 进入注册控制器
+15:12:33,361  INFO DruidDataSource:715 - {dataSource-1} inited
+15:12:35,791  INFO UserController:90 - 保存用户信息
+15:14:15,352  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:07:43 CST 2017]; parent: Root WebApplicationContext
+15:14:15,357  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 15:07:40 CST 2017]; root of context hierarchy
+15:14:15,368  INFO DruidDataSource:1444 - {dataSource-1} closed
+15:14:31,604  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+15:14:31,749  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 15:14:31 CST 2017]; root of context hierarchy
+15:14:31,879  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+15:14:34,610  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 3000 ms
+15:14:34,726  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+15:14:34,737  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:14:34 CST 2017]; parent: Root WebApplicationContext
+15:14:34,738  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+15:14:35,622  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+15:14:35,807  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+15:14:35,810  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+15:14:35,810  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+15:14:35,812  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+15:14:35,814  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+15:14:35,816  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+15:14:35,817  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+15:14:35,817  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+15:14:36,108  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:14:34 CST 2017]; parent: Root WebApplicationContext
+15:14:36,239  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:14:34 CST 2017]; parent: Root WebApplicationContext
+15:14:36,686  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1958 ms
+15:14:37,052  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:14:37,073  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:14:38,444  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:14:49,809  INFO UsersController:35 - 个人信息控制器
+15:14:49,957  INFO DruidDataSource:715 - {dataSource-1} inited
+15:18:55,120  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:14:34 CST 2017]; parent: Root WebApplicationContext
+15:18:55,124  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 15:14:31 CST 2017]; root of context hierarchy
+15:18:55,136  INFO DruidDataSource:1444 - {dataSource-1} closed
+15:19:18,470  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+15:19:18,641  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sat Nov 25 15:19:18 CST 2017]; root of context hierarchy
+15:19:18,754  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+15:19:21,191  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2715 ms
+15:19:21,274  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+15:19:21,286  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:19:21 CST 2017]; parent: Root WebApplicationContext
+15:19:21,289  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+15:19:21,951  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+15:19:22,150  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+15:19:22,155  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+15:19:22,156  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+15:19:22,158  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+15:19:22,158  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+15:19:22,160  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+15:19:22,161  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+15:19:22,162  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+15:19:22,383  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:19:21 CST 2017]; parent: Root WebApplicationContext
+15:19:22,478  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:19:21 CST 2017]; parent: Root WebApplicationContext
+15:19:22,732  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1457 ms
+15:19:22,893  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:19:22,910  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:19:25,622  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+15:29:59,444  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sat Nov 25 15:19:21 CST 2017]; parent: Root WebApplicationContext
+15:29:59,467  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sat Nov 25 15:19:18 CST 2017]; root of context hierarchy
+12:05:49,259  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+12:05:49,434  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sun Nov 26 12:05:49 CST 2017]; root of context hierarchy
+12:05:49,654  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+12:05:52,943  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 3646 ms
+12:05:53,031  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+12:05:53,039  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:05:53 CST 2017]; parent: Root WebApplicationContext
+12:05:53,040  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+12:05:53,938  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+12:05:54,127  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+12:05:54,130  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+12:05:54,131  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+12:05:54,133  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+12:05:54,134  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+12:05:54,135  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+12:05:54,136  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+12:05:54,136  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+12:05:54,411  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:05:53 CST 2017]; parent: Root WebApplicationContext
+12:05:54,521  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:05:53 CST 2017]; parent: Root WebApplicationContext
+12:05:54,817  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1786 ms
+12:05:57,057  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:05:57,105  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:05:59,267  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:06:02,223  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'springDispatcherServlet'
+12:08:06,396  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:05:53 CST 2017]; parent: Root WebApplicationContext
+12:08:06,401  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sun Nov 26 12:05:49 CST 2017]; root of context hierarchy
+12:09:31,269  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+12:09:31,403  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sun Nov 26 12:09:31 CST 2017]; root of context hierarchy
+12:09:31,534  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+12:09:33,993  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2717 ms
+12:09:34,067  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+12:09:34,084  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:09:34 CST 2017]; parent: Root WebApplicationContext
+12:09:34,092  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+12:09:35,495  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+12:09:35,832  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+12:09:35,837  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+12:09:35,838  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+12:09:35,840  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+12:09:35,841  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+12:09:35,844  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+12:09:35,844  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+12:09:35,845  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+12:09:36,173  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:09:34 CST 2017]; parent: Root WebApplicationContext
+12:09:36,327  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:09:34 CST 2017]; parent: Root WebApplicationContext
+12:09:36,558  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 2490 ms
+12:09:36,870  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:09:36,887  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:09:38,140  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:10:01,265  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:09:34 CST 2017]; parent: Root WebApplicationContext
+12:10:01,269  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sun Nov 26 12:09:31 CST 2017]; root of context hierarchy
+12:10:16,902  INFO ContextLoader:304 - Root WebApplicationContext: initialization started
+12:10:17,037  INFO XmlWebApplicationContext:582 - Refreshing Root WebApplicationContext: startup date [Sun Nov 26 12:10:17 CST 2017]; root of context hierarchy
+12:10:17,147  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springbean.xml]
+12:10:19,894  INFO ContextLoader:344 - Root WebApplicationContext: initialization completed in 2987 ms
+12:10:20,023  INFO DispatcherServlet:489 - FrameworkServlet 'springDispatcherServlet': initialization started
+12:10:20,031  INFO XmlWebApplicationContext:582 - Refreshing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:10:20 CST 2017]; parent: Root WebApplicationContext
+12:10:20,033  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [Spring/springmvc.xml]
+12:10:20,821  INFO SimpleUrlHandlerMapping:362 - Mapped URL path [/views/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+12:10:21,019  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getCode]}" onto public void com.card.controller.CodeController.getCode(java.lang.String)
+12:10:21,026  INFO RequestMappingHandlerMapping:543 - Mapped "{[/register],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UserController.register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,com.google.zxing.WriterException
+12:10:21,027  INFO RequestMappingHandlerMapping:543 - Mapped "{[/loadAll]}" onto public java.lang.String com.card.controller.UserController.loadAll()
+12:10:21,033  INFO RequestMappingHandlerMapping:543 - Mapped "{[/usersController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.loadAll(java.lang.String,java.lang.String)
+12:10:21,034  INFO RequestMappingHandlerMapping:543 - Mapped "{[/qrCodeController],produces=[text/html;charset=UTF-8]}" onto public java.lang.String com.card.controller.UsersController.qrCode(java.lang.String,java.lang.String)
+12:10:21,038  INFO RequestMappingHandlerMapping:543 - Mapped "{[/getOpenId]}" onto public java.lang.String com.card.controller.WeixinController.login(java.lang.String) throws java.lang.Exception
+12:10:21,039  INFO RequestMappingHandlerMapping:543 - Mapped "{[/weixin]}" onto public java.lang.String com.card.controller.WeixinController.checkSignature(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+12:10:21,039  INFO RequestMappingHandlerMapping:543 - Mapped "{[/redirect]}" onto public void com.card.controller.WeixinController.redirect(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+12:10:21,290  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:10:20 CST 2017]; parent: Root WebApplicationContext
+12:10:21,387  INFO RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:10:20 CST 2017]; parent: Root WebApplicationContext
+12:10:21,671  INFO DispatcherServlet:508 - FrameworkServlet 'springDispatcherServlet': initialization completed in 1647 ms
+12:10:22,337  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:10:22,356  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:10:23,483  WARN PageNotFound:1172 - No mapping found for HTTP request with URI [/] in DispatcherServlet with name 'springDispatcherServlet'
+12:10:36,751  INFO XmlWebApplicationContext:987 - Closing WebApplicationContext for namespace 'springDispatcherServlet-servlet': startup date [Sun Nov 26 12:10:20 CST 2017]; parent: Root WebApplicationContext
+12:10:36,755  INFO XmlWebApplicationContext:987 - Closing Root WebApplicationContext: startup date [Sun Nov 26 12:10:17 CST 2017]; root of context hierarchy

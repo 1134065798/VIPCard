@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="my" />
+        <module name="VIPCard" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="my" target="1.5" />
+      <module name="VIPCard" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

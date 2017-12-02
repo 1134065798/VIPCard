@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>MemberInformation</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" name="viewport" />
+	<link rel="stylesheet" href="css\MemberInformation.css">
+	<link rel="stylesheet" href="css\font-awesome.css">
 </head>
 <body>
-    <h1>MemberInformation</h1>
+	<header>
+		<span>师哥师姐</span>
+	</header>
+	<div class="section">
+		<div class="head">
+			<i class="fa fa-user"></i>
+			<span>我的会员信息</span>
+		</div>
+		<div class="information">
+			<div class="i-name">
+				<span class="i-name-span">姓&nbsp;&nbsp;&nbsp;&nbsp;名 :</span>
+			</div>
+			<div class="i-sp">
+				<span class="i-sp-s">学&nbsp;&nbsp;&nbsp;&nbsp;校 :</span></br>
+				<span class="i-sp-p">电话号码 :</span>
+			</div>
+		</div>
+		<div class="date">
+			<div class="d-active">
+				<span class="d-active-d">激活日期 :</span>
+			</div>
+			<div class="d-pcode">
+				<div class="d-photo">
+					<span>本人照片</span>
+					<div><img class="d-photo-div" alt="图片不存在"></div>
+				</div>
+				<div class="d-twocode">
+					<span>二维码</span>
+					<div><img class="d-twocode-div" alt="假装有个二维码"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="script\jquery.js"></script>
+	<script src="script\MemberInformation.js"></script>
+	
 </body>
 </html>

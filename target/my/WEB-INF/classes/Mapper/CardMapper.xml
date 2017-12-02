@@ -2,11 +2,11 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.card.dao.ICardDao">
+ <mapper namespace="com.card.dao.ICardDao">
     <select id="findCard" resultType="com.card.entity.Card" parameterType="String">
         select * from card where activeCode=#{activeCode}
     </select>
-    <delete id="delectCard" parameterType="String" >
+    <delete id="deleteCard" parameterType="String" >
         delete from card where cardId=#{cardId}
     </delete>
 

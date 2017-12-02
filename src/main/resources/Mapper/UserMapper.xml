@@ -8,9 +8,9 @@
     </select>
 
     <select id="loadUserByopenId"  parameterType="string" resultType="com.card.entity.User">
-       SELECT openId,userName,userSchool,phone,userPhoto FROM users WHERE openId= #{openId}
-    </select>
-    <insert id="insert" parameterType="com.card.entity.User">
+    SELECT openId,userName,userSchool,phone,userPhoto FROM users WHERE openId= #{openId}
+  </select>
+    <insert id="saveUser" parameterType="com.card.entity.User">
         insert into users VALUES (#{openId},#{phone},#{userName},#{userSex},
         #{userSchool},#{userMajor},#{userPhoto})
     </insert>

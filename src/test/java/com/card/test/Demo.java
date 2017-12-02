@@ -2,7 +2,6 @@ package com.card.test;
 
 import org.apache.log4j.Logger;
 import org.junit.Test;
-import redis.clients.jedis.Jedis;
 
 /**
  * Created by ypj on 2017/11/14.

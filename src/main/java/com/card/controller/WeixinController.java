@@ -20,6 +20,7 @@ import java.security.DigestException;
 
 @Controller
 public class WeixinController {
+
     private static final Logger log=Logger.getLogger(WeixinController.class);
 
     private String token= PropertyUtil.getValue_String("weixin.token");
@@ -34,6 +35,7 @@ public class WeixinController {
     @RequestMapping("/weixin")
     public String checkSignature(@RequestParam String signature, @RequestParam String timestamp,
                                  @RequestParam String nonce, @RequestParam String echostr) {
+
         log.info("提交服务器配置");
 
         //字典排序
@@ -57,14 +59,15 @@ public class WeixinController {
 
     @RequestMapping("/redirect")
     public void redirect(HttpServletResponse response) throws Exception {
-
-        response.sendRedirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdb9a99feced63612&redirect_uri=http%3a%2f%2fweixin.ppplans.com%2fmy%2fgetOpenId&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");
+        response.sendRedirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxdb9a99feced63612&redirect_uri=http%3a%2f%2fweixin.ppplans.com%2fvipcard%2fgetOpenId&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect");
 
     }
 
     @RequestMapping("/getOpenId")
     public String login(@RequestParam(value = "code") String code) throws Exception {
+
         log.info("获得openId");
+
         String openId = GetOpenIdUtil.getOpenid(code);
         boolean bool=userService.loadById(openId);
         return bool?"redirect:/views/MemberInformation.html"+"?openId="+openId

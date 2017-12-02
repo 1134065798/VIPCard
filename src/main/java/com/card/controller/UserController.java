@@ -8,11 +8,15 @@ import com.card.service.ICardService;
 import com.card.service.IUserService;
 import com.card.service.IVipCardService;
 import com.card.util.QRCodeUtil;
+import com.card.util.RedisPool;
 import com.card.util.TimeUtil;
 import com.google.zxing.WriterException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -41,6 +45,8 @@ public class UserController {
 		return List.toString();
 	}
 
+	@Transactional(propagation= Propagation.REQUIRED,
+			isolation= Isolation.READ_COMMITTED)
 	@ResponseBody
 	@RequestMapping(value = "/register",produces = "text/html;charset=UTF-8")
 	public String register(@RequestParam("openId")String openId,
@@ -59,9 +65,7 @@ public class UserController {
 		String errmsg=null;
 		String error="0";
 
-		QRCodeUtil qrCodeUtil=new QRCodeUtil();
-
-		Jedis jedis=new Jedis("47.95.222.74",6379);
+		Jedis jedis= RedisPool.getRedis();
 		String code=jedis.get(phone);
 		jedis.close();
 
@@ -82,21 +86,23 @@ public class UserController {
 			vipCard.setCardId(card.getCardId());
 			vipCard.setOpenId(user.getOpenId());
 			vipCard.setCreateTime(TimeUtil.getCreateTime());
-			vipCard.setQrCode(qrCodeUtil.generateQRCode(user.getOpenId()));
+			vipCard.setQrCode(QRCodeUtil.generateQRCode(openId));
 
 			log.info("保存用户信息");
 
 			vipCardService.saveVipCard(vipCard);
-			cardService.delectCard(card.getCardId());
+			cardService.deleteCard(card.getCardId());
 			userService.saveUser(user);
 
 			error = "1";
 		}
+
 		Map<String,String> map=new HashMap<String, String>();
 		map.put("error",error);
 		map.put("errmsg",errmsg);
 
+		System.out.println(map);
+
 		return jsonCallBack+"("+JSON.toJSONString(map)+")";
 	}
-
 }

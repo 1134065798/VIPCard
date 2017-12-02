@@ -10,7 +10,7 @@ public class GetAccessTokenUtilTest {
     @Test
     public void testgetAccessToken() throws Exception {
 
-        Jedis jedis=new Jedis("47.95.222.74",6379);
+        Jedis jedis=RedisPool.getRedis();
         String access_token=null;
         if(jedis.exists("access_token")==false) {
             access_token= GetAccessTokenUtil.getAccessToken();

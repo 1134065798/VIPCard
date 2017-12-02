@@ -8,6 +8,6 @@ public interface IUserDao {
 
 	public List<User> loadAll();
 	public User loadUserByopenId(String openId);
-	public int insert(User user);
+	public int saveUser(User user);
 	public User loadById(String openId);
 }

@@ -59,7 +59,7 @@ public class QRCodeUtil {
         }
     }
 
-    public String generateQRCode(String openId) throws IOException, WriterException {
+    public static String generateQRCode(String openId) throws IOException, WriterException {
 
         Hashtable<EncodeHintType,Object> hints=new Hashtable<EncodeHintType, Object>();
         hints.put(EncodeHintType.CHARACTER_SET, "utf-8");

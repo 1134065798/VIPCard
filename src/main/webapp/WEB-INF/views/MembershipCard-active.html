@@ -1,10 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="UTF-8">
+	<title>MembershipCard-active</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0" name="viewport" />
+	<link rel="stylesheet" href="css\MembershipCard-active.css">
+	<link rel="stylesheet" href="css\font-awesome.css">
 </head>
 <body>
-    <h1>MembershipCard-active</h1>
+	<header>
+		<span>师哥师姐</span>
+	</header>
+	<div class="aside">
+		<span>师哥师姐会员卡激活</span>
+	</div>
+	<div class="section">
+		<div class="name">
+			<i class="fa fa-user"></i>
+		    <span>姓&nbsp;&nbsp;&nbsp;名</span>
+		    <input type="text" id="name">
+		</div>
+		<div class="sex">
+		    <i class="fa fa-male"></i>
+			<span>男</span>
+		    <input type="radio" name="sex" value="男">
+		    <i class="fa fa-female"></i>
+			<span>女</span>
+		    <input type="radio" name="sex" value="女">
+		</div>
+		<div class="school">
+			<i class="fa fa-home"></i>
+		    <span>学&nbsp;&nbsp;&nbsp;校</span>
+		    <input type="text" id="school">
+		</div>
+		<div class="major">
+			<i class="fa fa-gear"></i>
+		    <span>专&nbsp;&nbsp;&nbsp;业</span>
+		    <input type="text" id="major">
+		</div>
+		<div class="phone">
+			<i class="fa fa-phone"></i>
+		    <span>电&nbsp;&nbsp;&nbsp;话</span>
+		    <input type="text" id="phone">
+		</div>
+		<div class="verification">
+			<i class="fa fa-pencil"></i>
+		    <span>验证号码</span>
+		    <input type="text" id="ver-input">
+		    <input type="button" value="获取验证码" id="getCode">
+		</div>
+		<div class="number-active">
+			<i class="fa fa-th-list"></i>
+		    <span>数字激活码</span>
+		    <input type="text" id="number-active-input">
+		</div>
+		<div class="photo" id="btn1-photo">
+			<img id="btn1-img">
+		</div>
+		<label for="btn1-input" class="btn1">
+			<span>上传本人照片</span>
+		</label>
+		<input type="file" id="btn1-input">
+		<button class="btn2" id="btn2">确认提交</button>
+	</div>
+	<script src="script\jquery.js"></script>
+	<script src="script\MembershipCard-active.js"></script>
+	
 </body>
 </html>
